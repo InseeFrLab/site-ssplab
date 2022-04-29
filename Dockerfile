@@ -6,6 +6,8 @@ WORKDIR /app
 # Install dependencies
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-COPY . .
+COPY site_ssplab/. .
+COPY static/. .
+COPY entrypoint.sh .
 RUN chmod +x /app/entrypoint.sh
 ENTRYPOINT [ "/app/entrypoint.sh" ]
