@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: site-ssplab
+spec:
+  destination:
+    namespace: projet-sitessplab
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kubernetes
+    repoURL: 'https://github.com/InseeFrLab/site-ssplab.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      selfHeal: true
+
