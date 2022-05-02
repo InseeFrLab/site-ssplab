@@ -14,9 +14,6 @@ spec:
       containers:
       - name: site-ssplab
         image: inseefrlab/site-ssplab
-        env:
-        - name: DEBUG
-          value: "True"
         volumeMounts:
         - mountPath: "/usr/share/data/"
           name: site-ssplab-pv
