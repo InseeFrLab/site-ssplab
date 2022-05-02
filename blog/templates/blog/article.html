@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %} 
+
+{% block body %}
+<div class = "row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" disabled>
+        <div class="card-body" disabled>
+            <img src="{{ article.image_titre }}" class="card-img-top w" alt="...">
+
+            <h1> {{ article.title }} </h1>
+            <h4> {{ article.created_on }} </h4>
+            <p> {{ article.body |safe}}</p>
+
+            <p> {{ article.message }}</p>
+        </div>
+    </div>
+    {% block sidebar %} {% include 'home/sidebar.html' %} {% endblock sidebar %}
+
+</div>
+{% endblock %}

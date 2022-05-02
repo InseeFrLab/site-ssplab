@@ -1,0 +1,58 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+
+{% block body %}
+
+<section class = team-section>
+    
+    <h2 class="h1-responsive font-weight-bold my-5">Expérimentations actuelles du SSP Lab</h2>
+
+<p>Les expérimentations sont des projets initiés par des unités métiers dans le but d'explorer la possibilité d'améliorer leur processus de production grâce à l'utilisation de méthodes ou techniques innovantes.</p>
+
+<p> Pour les agents disposant d'un accès, un détail plus important sur ces expérimentations (avec notamment le lien de certaines présentations internes) est disponible sur l'intranet de l'Insee et du SSP (<a href = "https://intranet.insee.fr/jcms/c_2034660/experimentations">ici</a>).</p>
+
+
+    <div class="row row-cols-1 row-cols-3 g-4">
+
+        {% for expe in experimentations %}
+            <div class = "col">
+                <div class="card h-100 bg-light" style = "width: 22rem; " >
+                        <!--<img src="../static/img/{{expe.image_titre}}" class="card-img-top w" alt="...">-->
+                        <a href="/expe/experimentation/{{ expe.slug }}"><img src="{{expe.image_titre}}" class="card-img-top w" alt="..."></a>
+                        <div class="card-body">
+                            <h2 class="card-title">{{ expe.title }}</h2>
+                        </div>
+                        <div class = "card-footer">
+
+                            <a href="/expe/experimentation/{{ expe.slug }}" class="btn btn-primary">Suite &rarr;</a>
+                        </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <h2 class="h1-responsive font-weight-bold my-5">Expérimentations passées du SSP Lab</h2>
+
+
+    <div class="row row-cols-1 row-cols-3 g-4">
+
+        {% for anciennes_expe in anciennes_experimentations %}
+            <div class = "col">
+                <div class="card h-100 bg-light" style = "width: 22rem; " >
+                        <a href="/expe/experimentation/{{ anciennes_expe.slug }}" ><img src="{{anciennes_expe.image_titre}}" class="card-img-top w" alt="..."></a>
+                        <div class="card-body">
+                            <h2 class="card-title">{{ anciennes_expe.title }}</h2>
+                        </div>
+                        <div class = "card-footer">
+                            <a href="/expe/experimentation/{{ anciennes_expe.slug }}" class="btn btn-primary">Suite &rarr;</a>
+                        </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

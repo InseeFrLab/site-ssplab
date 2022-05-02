@@ -1,0 +1,90 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block title %}
+Bienvenue sur la page du SSP Lab
+{% endblock %}
+
+{% block styles %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+{% endblock %}
+
+
+
+
+{% block body %}
+<section class="team-section text-center">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold my-5">Bienvenue sur le site du SSP Lab</h2>
+    <!-- Section description -->
+    <p class="grey-text w-responsive mx-auto mb-5">Vous y trouverez les principales informations autour des différentes activités du SSP Lab. </p>
+  
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+            <div class="card testcard h-100 text-white bg-dark mb-3">
+                <a href = "/expe"><img src="{% static '/img/expe.jpg' %}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                <a href = "/expe" class = "btn-secondary"><h5 class="card-header">Expérimentations</h5></a>
+                <p class="card-text">Utilisons des techniques innovantes pour améliorer la production statistique.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col mb-4">
+            <div class="card testcard h-100 text-white bg-dark">
+                <a href = "/explo"><img src="{% static '/img/explo.jpg' %}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                <a href = "/explo" class = "btn-secondary"><h5 class="card-header">Explorations</h5></a>
+                <p class="card-text">Exploration de nouvelles données à des fins d'études ou de production.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col mb-4">
+            <div class="card testcard h-100 text-white bg-dark">
+                <a href = "/appui"><img src="{% static '/img/appui.jpg' %}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                <a href = "/expe" class = "btn-secondary"><h5 class="card-header">Appui méthodologique</h5></a>
+                <p class="card-text">Appui méthodologique via la recherche de doctrine ou l'assistance.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+            <div class="card testcard h-100 text-white bg-dark">
+                <a href = "/evenements"><img src="{% static '/img/seminaires.jpg' %}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                <a href = "/expe" class = "btn-secondary"><h5 class="card-title">Evènements et communauté</h5></a>
+                <p class="card-text">les principaux évènements (séminaires et évènements de formation) organisés par le SSP Lab.</p>
+                </div>
+            </div>
+            </div>
+            <div class="col mb-4">
+            <div class="card testcard h-100 text-white bg-dark">
+                <a href = "/outils"><img src="{% static '/img/tools.jpg' %}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                <a href = "/expe" class = "btn-secondary"><h5 class="card-title">Outils, codes et repos</h5></a>
+                <p class="card-text">Les outils mis à disposition par le SSP Lab, ainsi que les principaux repos de travail.</p>
+                </div></a>
+            </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card testcard h-100 text-white bg-dark">
+                    <a href = "/blog"><img src="{% static '/img/blog.jpg' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                    <a href = "/expe" class = "btn-secondary"><h5 class="card-title">Blog</h5></a>
+                    <p class="card-text">Le Blog du SSP Lab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+{% endblock %}

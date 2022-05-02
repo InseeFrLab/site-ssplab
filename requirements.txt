@@ -1,0 +1,6 @@
+wheel
+Django==3.2
+python-environ
+environ
+gunicorn
+whitenoise

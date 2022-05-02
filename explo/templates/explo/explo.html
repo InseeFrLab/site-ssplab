@@ -1,0 +1,62 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block body %}
+
+<section class = team-section>
+    
+    <h2 class="h1-responsive font-weight-bold my-5">Explorations actuellles du SSP Lab du SSP Lab</h2>
+
+    <p>Les explorations consistent en l'exploration du potentiel de nouvelles données (et notamment de donnes privées) dans le cadre de la statistique publique.</p>
+
+    <p>Comme dans le cas des expérimentations, pour ceux qui y ont accès, n'hésitez pas à consulter la page du SSP Lab sur l'<a href="https://intranet.insee.fr/jcms/c_2034660/experimentations">intranet de l'Insee</a> (accessible au SSP) pour plus de détails et l'accès aux présentations internes.</p>
+    <div class="row row-cols-1 row-cols-3 g-4">
+
+            {% for explo in explorations %}
+            <div class = "col">
+                <div class="card h-100 bg-light" style = "width: 22rem; " >
+                        <img src="../static/img/{{ explo.image_titre }}" class="card-img-top w" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ explo.title }}</h2>
+                            <p class="card-text">{{explo.body|slice:":100" |safe }}</p>
+
+                        </div>
+                        <div class = "card-footer">
+
+                            <a href="/explo/exploration/{{ explo.slug }}" class="btn btn-primary">Suite &rarr;</a>
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+
+        <h2 class="h1-responsive font-weight-bold my-5">Explorations passées du SSP Lab du SSP Lab</h2>
+
+        <div class="row row-cols-1 row-cols-3 g-4">
+
+            {% for explo in anciennes_explorations %}
+            <div class = "col">
+                <div class="card h-100 bg-light" style = "width: 22rem; " >
+                        <img src="../static/img/{{ explo.image_titre }}" class="card-img-top w" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ explo.title }}</h2>
+                            <p class="card-text">{{explo.body|slice:":100" |safe }}</p>
+
+                        </div>
+                        <div class = "card-footer">
+
+                            <a href="/explo/exploration/{{ explo.slug }}" class="btn btn-primary">Suite &rarr;</a>
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+
+
+    </section>
+    
+{% endblock %}
+

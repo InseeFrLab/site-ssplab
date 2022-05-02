@@ -1,0 +1,44 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block title %}
+Lettres Big Data
+{% endblock %}
+
+{% block body %}
+
+<div class = "row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" disabled>
+        <div class="card-body" disabled>
+                <h1>Lettres BIG DATA</h1>
+                <p>De façon régulière, le SSP Lab envoie à un public large une lettre d'information. Celle-ci peut porter sur des expérimentations en cours,
+                    sur des travaux terminés, sur une thématique intéressante, ou encore sur l'actualité plus générale du SSP Lab. 
+                </p>
+                <p>
+                    Si vous ne recevez pas encore cette lettre, et souhaitez être ajouté.e à la liste de diffusion, n'hésitez pas
+                    à nous le signalez en contactant l'adresse suivante : <a href="mailto:ssplab@insee.Fr">ssplab@insee.fr</a>
+                </p>
+                <p>
+                    Cette page permet de retrouver les principales lettres publiées :
+                    <ul>
+                        <li><b><a href="{% static '/doc/lettres/lettre big data n11.pdf' %}">Lettre 11 (octobre 2021) :</a> Entrez dans la Da.tascie.nce ! Retour sur le premier Funathon du Service statistique public</b></li>
+                        <li><b><a href="{% static '/doc/lettres/lettre big data n10 versionfinale.pdf' %}">Lettre 10 (décembre 2020) :</a> Crise du Covid et confinement : les méthodes de la statistique publique à l’épreuve du feu</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre Big Data n9 corr.pdf' %}">Lettre 9 (décembre 2019) :</a> Data Lake : une destination singulière</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre big data_n8.pdf' %}">Lettre 8 (mai 2019) :</a> Images satellites, SPOT en ciel pour la statistique publique ?</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre big data_n7.pdf' %}">Lettre 7 (avril 2018) :</a> Coopérer pour innover, retour sur le hackathon les Champs de Sirene</b></li>
+                        <li><b><a href="{% static '/doc/lettres/lettre big data_n6-Novembre 2017.pdf' %}">Lettre 6 (novembre 2017) :</a> Les données de téléphones mobiles pour la Statistique Publique : quels usages et quelles questions?</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre Big Data n5.pdf' %}">Lettre 5 (mars 2017) :</a> Enrichir nos données grâce à Internet</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre Big data 4.pdf' %}">Lettre 4 (septembre 2016) :</a> Des modifications juridiques pour accompagner les évolutions du numérique</b></li>
+                        <li><b><a href="{% static '/doc/lettres/Lettre Big data 3.pdf' %}">Lettre 3 (juin 2016) :</a> Travailler avec des Big Data, qu'est-ce que ça change ?</b></li>
+                        <li><b><a href="{% static '/doc/lettres/LettreBigData2.pdf' %}">Lettre 2 (mars 2016) :</a> Les Big Données de prix, quelles opportunités ?</b></li>
+                        <li><b><a href="{% static '/doc/lettres/LettreBigData1.pdf' %}">Lettre 1 (décembre 2015) :</a> Big Data et Statistique Publique</b></li>
+                        {% static '/img/tools.jpg' %}
+                    </ul>
+                </p>
+               
+        </div>
+    </div>
+    
+</div>
+
+
+    {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block title %}
+Qu'est ce que le SSP Lab ?
+{% endblock %}
+
+{% block body %}
+
+<div class = "row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" disabled>
+        <div class="card-body" disabled>
+                <h1>Séminaires</h1>
+                <p>Différents séminaires sur les sciences des données sont organisés par le SSP Lab et plus globalement par la Direction de la Méthodologie de l'Insee, certains en internes, d'autres accessibles à l'extérieur.</p>
+                <p>Pour retrouver l'ensemble de ces séminaires, et pour les personnes y ayant accès, il est possible de se référer à <a href = "https://intranet.insee.fr/jcms/c_2004572/seminaires">la page dédiée</a> de l'intranet Insee.</p>
+                <p>Les séminaires externes (appelés "Séminaires de Méthodologie Statistique et de Sciences des Données"), de leur côté, sont accessibles directement sur le site de l'Insee, dans <a href = "https://www.insee.fr/fr/information/1894926">la rubrique dédiée</a>.</p>
+                <p>Plus particulièrement, on peut citer quelques séminaires consacrés aux thématiques de science des données :
+                    <li><a href = "https://www.insee.fr/fr/information/1894926">Méthodologie statistique et Sciences des données : la méthodologie des appariements</a></li>
+                    <li><a href = "https://www.insee.fr/fr/information/5357816">Big Data et Statistique publique : Nouvelles approches pour coder dans une nomenclature </a>: machine learning et autocomplétion</li>
+                    <li>Big Data et Statistique publique : recensement et identification de l'employeur ; plateformes et "micro-travail"</li>
+                    <li><a href = "https://www.insee.fr/fr/information/2653115">Séminaire de lancement du SSP Lab</a></li>
+                </p>
+        </div>
+    </div>
+    
+</div>
+
+
+    {% endblock %}

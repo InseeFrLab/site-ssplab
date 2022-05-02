@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block title %}
+Les outils du SSP Lab{% endblock %}
+
+{% block body %}
+
+<div class = "row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" disabled>
+        <div class="card-body" disabled>
+                <h1>Outils et codes</h1>
+                <p> Le SSP Lab met à disposition, dès que c'est possible, le code issu de ses expérimentations, ainsi que des outils qui peuvent etre utilisés largement au sein du SSP.
+                </p>
+                <p>
+                Pour accéder au code des principales expérimentations, les repos de référence sont ceux utilisés dans l'ensemble de l'Insee. Il s'agit : 
+                    <ul>
+                        <li><b>du <a href = "https://github.com/InseeFr">GitHub de l'Insee</a>, qui inclut les repos de codes en production</b></li>
+                        <li><b>du repo <a href = "https://github.com/InseeFrLab">InseeFrLab</a>, qui inclut le code d'éléments plus exploratoires. On y retrouve notamment un code du SSP Lab réalisé suite à l'analyse des mouvements de population lors du confinement, à partir des données de téléphonie mobile.</b></li>
+                    </ul>
+                </p>
+                <p>
+                En termes d'outils, le SSP Lab tente de développer des API pour que les résultats des expérimentations. Pour le moment, ces APIs ne sont cependant disponibles que via le réseau interne de l'Insee.
+
+                    </ul>
+                </p>
+        </div>
+    </div>
+    
+</div>
+
+
+    {% endblock %}

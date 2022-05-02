@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %} 
+
+
+{% block body %}
+
+<section class = team-section>
+    
+    <h2 class="h1-responsive font-weight-bold my-5">Blog du SSP Lab</h2>
+    <div class="row">
+        <div class="col-md-8 mt-3 left">
+
+            {% for article in articles %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <img src="{{ article.image_titre }}" class="card-img-top w" alt="...">
+                        <h2 class="card-title">{{ article.title }}</h2>
+                        <p class="card-text text-muted h6">{{ article.author }} | {{ article.created_on}} </p>
+                        <p class="card-text">{{article.body|slice:":200" |safe }}</p>
+                        <a href="/blog/article/{{ article.slug }}" class="btn btn-primary">Suite &rarr;</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+        {% block sidebar %} {% include 'home/sidebar.html' %} {% endblock sidebar %}
+
+    </div>
+</section>
+
+{% endblock %}

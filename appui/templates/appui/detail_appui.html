@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %} 
+{% load static %}
+{% block body %}
+<div class = "row">
+    <div class="col-md-8 card mb-4  mt-3 left  top" disabled>
+        <div class="card-body" disabled>
+            <!-- <img src="../../../static/img/{{ appui.image_titre }}" class="card-img-top w" alt="..."> -->
+            <img src="{{ appui.image_titre }}" class="card-img-top w" alt="...">
+            <h1> {{ appui.title }} </h1>
+            <p> {{ appui.body |safe}}</p>
+            <!--
+            <p><u>Période prévue pour l'appui : </u> {{ appui.date_debut }} à {{ appui.date_fin }}</p>
+            <p><u> Unité métier partenaire : </u></p>
+            <p><u>Output : </u></p>
+            -->
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
