@@ -14,10 +14,6 @@ spec:
       containers:
       - name: myapp
         image: tomseimandiinsee/django-ssplab
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         env:
         - name: DEBUG
           value: "True"
