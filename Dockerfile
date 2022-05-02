@@ -1,5 +1,4 @@
 FROM python:3.10
-ENV SECRET_KEY=changeme 
 ENV DEBUG=False
 ENV ALLOWED_HOSTS=*
 WORKDIR /app
