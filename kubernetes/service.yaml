@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: site-ssplab-service
 spec:
   selector:
-    app: myapp
+    app: site-ssplab
   ports:
   - port: 80
     targetPort: 8000

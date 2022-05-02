@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: site-ssplab
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: site-ssplab
   template:
     metadata:
       labels:
-        app: myapp
+        app: site-ssplab
     spec:
       containers:
-      - name: myapp
-        image: tomseimandiinsee/django-ssplab
+      - name: site-ssplab
+        image: inseefrlab/site-ssplab
         env:
         - name: DEBUG
           value: "True"
         volumeMounts:
         - mountPath: "/usr/share/data/"
-          name: myapp-pv
+          name: site-ssplab-pv
       volumes:
-      - name: myapp-pv
+      - name: site-ssplab-pv
         persistentVolumeClaim:
-          claimName: myapp-pvc
+          claimName: site-ssplab-pvc
