@@ -3,6 +3,7 @@
 import os
 import sys
 
+
 # https://www.docstring.fr/blog/deployer-une-application-django-sur-pythonanywhere/
 def main():
     """Run administrative tasks."""

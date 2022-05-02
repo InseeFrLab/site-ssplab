@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site-ssplab
+spec:
+  selector:
+    matchLabels:
+      app: site-ssplab
+  template:
+    metadata:
+      labels:
+        app: site-ssplab
+    spec:
+      containers:
+      - name: site-ssplab
+        image: inseefrlab/site-ssplab
+        volumeMounts:
+        - mountPath: "/usr/share/data/"
+          name: site-ssplab-pv
+      volumes:
+      - name: site-ssplab-pv
+        persistentVolumeClaim:
+          claimName: site-ssplab-pvc
