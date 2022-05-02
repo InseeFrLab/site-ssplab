@@ -3,14 +3,15 @@ kind: Application
 metadata:
   name: site-ssplab
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/InseeFrLab/site-ssplab.git
-    targetRevision: HEAD
-    path: kubernetes
   destination:
-    server: https://kubernetes.default.svc
-    namespace: user-sitessplab
+    namespace: projet-sitessplab
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kubernetes
+    repoURL: 'https://github.com/InseeFrLab/site-ssplab.git'
+    targetRevision: HEAD
+  project: default
   syncPolicy:
     automated:
       selfHeal: true
+
