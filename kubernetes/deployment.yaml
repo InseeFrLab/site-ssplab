@@ -17,6 +17,22 @@ spec:
         volumeMounts:
         - mountPath: "/usr/share/data/"
           name: site-ssplab-pv
+        env: 
+          - name: SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: django-secret
+                key: key
+          - name: ADMIN_USER
+            valueFrom:
+              secretKeyRef:
+                name: django-secret
+                key: user
+          - name: ADMIN_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: django-secret
+                key: password
       volumes:
       - name: site-ssplab-pv
         persistentVolumeClaim:

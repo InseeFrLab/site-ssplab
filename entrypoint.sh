@@ -1,7 +1,6 @@
 #!/bin/sh
 cd site_ssplab
 python3 manage.py migrate
-# python3 manage.py collectstatic
 DJANGO_SUPERUSER_PASSWORD=$ADMIN_PASSWORD python3 manage.py createsuperuser \
     --no-input \
     --username=$ADMIN_USER \
