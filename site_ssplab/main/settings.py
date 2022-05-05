@@ -151,9 +151,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
-
+STATIC_ROOT = '/var/www/ssplab.lab.sspcloud.fr/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-# STATICFILES_DIRS = [
-#     os.path.join(ROOT_DIR, 'static'),
-# ]
