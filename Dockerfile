@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:alpine
 ENV SECRET_KEY=changeme
 ENV DEBUG=False
 ENV ALLOWED_HOSTS=*
