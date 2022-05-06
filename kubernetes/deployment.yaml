@@ -17,6 +17,7 @@ spec:
         volumeMounts:
         - mountPath: "/usr/share/data/"
           name: site-ssplab-pv
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "5Gi"
