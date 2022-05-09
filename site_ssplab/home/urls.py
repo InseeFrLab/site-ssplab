@@ -12,4 +12,5 @@ urlpatterns = [
     path('funathon', views.funathon, name = 'funathon'),
     path('seminaires', views.seminaires, name = 'seminaires'),
     path('pres', views.pres, name = 'pres'),
+    path('communaute', views.communaute, name = 'communaute'),
 ]
